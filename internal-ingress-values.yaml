@@ -1,0 +1,7 @@
+controller:
+  service:
+    loadBalancerIP: 10.252.56.254
+    annotations:
+      service.beta.kubernetes.io/azure-load-balancer-internal: "true"
+
+# helm install nginx-ingress ingress-nginx/ingress-nginx -f internal-ingress.yaml

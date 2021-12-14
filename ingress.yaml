@@ -29,3 +29,5 @@ spec:
             name: ingress-demo
             port:
               number: 80
+
+# kubectl create secret tls bistrobytes-tls --key cert.key --cert cert.pem

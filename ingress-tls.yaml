@@ -13,7 +13,7 @@ spec:
       - api.bistrobytes.com.sg
       secretName: bistrobytes-tls
     - hosts:
-      - staging.bistrobytes.com.sg
+      - integration.bistrobytes.com.sg
       secretName: bistrobytes-tls
   rules:
   - host: api.bistrobytes.com.sg
@@ -26,7 +26,7 @@ spec:
             name: aks-helloworld
             port:
               number: 80
-  - host: staging.bistrobytes.com.sg
+  - host: integration.bistrobytes.com.sg
     http:
       paths:
       - path: /

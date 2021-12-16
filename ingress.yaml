@@ -12,7 +12,7 @@ spec:
   - host: api.bistrobytes.com.sg
     http:
       paths:
-      - path: /
+      - path: /(.*)
         pathType: Prefix
         backend:
           service:
@@ -22,7 +22,7 @@ spec:
   - host: integration.bistrobytes.com.sg
     http:
       paths:
-      - path: /
+      - path: /(.*)
         pathType: Prefix
         backend:
           service:

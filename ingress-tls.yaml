@@ -15,7 +15,33 @@ spec:
     - hosts:
       - integration.bistrobytes.com.sg
       secretName: bistrobytes-tls
+    - hosts:
+      - cms.bistrobytes.com.sg
+      secretName: bistrobytes-tls
+    - hosts:
+      - admin.bistrobytes.com.sg
+      secretName: bistrobytes-tls
   rules:
+  - host: cms.bistrobytes.com.sg
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: aks-helloworld
+            port:
+              number: 80
+  - host: admin.bistrobytes.com.sg
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: aks-helloworld
+            port:
+              number: 80
   - host: api.bistrobytes.com.sg
     http:
       paths:
